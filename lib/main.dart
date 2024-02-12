@@ -18,14 +18,14 @@ class Autho extends StatelessWidget {
       ),
       body: Center(
         child: Column(children: [
-        const SizedBox(width: 400, height: 100, child: TextField(
+        const SizedBox(width: 400, height: 80, child: TextField(
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: 'Enter your Login',
              ),
            ),
           ),
-        const SizedBox(width: 400, height: 100, child: TextField(
+        const SizedBox(width: 400, height: 80, child: TextField(
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: 'Enter your Password',
