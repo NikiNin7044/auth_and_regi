@@ -1,16 +1,21 @@
-# two_windows
+# Two windows and a button.
 
-A new Flutter project.
+A Flutter Project with two windows and buttons that move you from one window to another.
 
-## Getting Started
+## Auth window.
+The Home window. Has TextFields for Login and Password, a button to enter account (does nothing) and a button to go to a registration window.
 
-This project is a starting point for a Flutter application.
+This is how it looks like at the minimum size in browser.
+![Screenshot1](pics/Win1smol.png)
 
-A few resources to get you started if this is your first Flutter project:
+And this is when it's stretched.
+![Screenshot2](pics/Win1big.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Registration window.
+Can be accessed by pressing the registration button on the logging in window. Has a few TextFields for email, login and password, a button to register (does nothing) and a button to go to a logging in window.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This is how it looks like stretched.
+![Screenshot3](pics/Win2big.png)
+
+And this is at the minimum size. As you can see, there's a scroll to scroll down to the buttons.
+![Screenshot4](pics/Win2scroll.png)
