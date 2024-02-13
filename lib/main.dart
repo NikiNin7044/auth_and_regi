@@ -12,38 +12,44 @@ class Autho extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Authorization'),
       ),
-      body: Center(
-        child: Column(children: [
-        const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Enter your Login',
-             ),
-           ),
-          ),
-        const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Enter your Password',
+      body: SingleChildScrollView(
+        child: Center(
+            child: Column(
+            children: [
+            const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter your Login',
+                   ),
+                 ),
+            const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter your Password',
+                    ),
+                 ),
+            Container(height: 10,),
+            ElevatedButton(
+                child: const Text('Enter Account'),
+                onPressed: () {},
               ),
-           ),
+            Container(height: 30,),
+            TextButton(
+                child: const Text('Register here!'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Regi()),
+                  );
+                },
+              ),
+            ],
+                  ),
           ),
-        Container(height: 20,),
-        ElevatedButton(
-          child: const Text('Register here!'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const Regi()),
-            );
-          },
-        ),
-        ],
-      ),
       ),
     );
   }
@@ -54,49 +60,53 @@ class Regi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: const Text('Registration'),
       ),
-      body: Center(
-        child: Column(children: [
-          const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Enter your E-mail',
-              ),
-            ),
+      body: SingleChildScrollView(
+        child: Center(
+              child: Column(
+              children: [
+                  const TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter your E-mail',
+                      ),
+                    ),
+                const TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Create your Login',
+                     ),
+                    ),
+                const TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Create a Password',
+                     ),
+                    ),
+                  const TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Confirm the Password',
+                      ),
+                    ),
+                Container(height: 10,),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Register Account'),
+                ),
+                Container(height: 30,),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Log in here!'),
+                ),
+                ],
+                ),
           ),
-        const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Create your Login',
-             ),
-            ),
-          ),
-        const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Create a Password',
-             ),
-            ),
-          ),
-          const SizedBox(width: 400, height: 80, child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Confirm the Password',
-              ),
-            ),
-          ),
-        Container(height: 20,),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Log in here!'),
-        ),
-        ],
-      ),
       ),
     );
   }
